@@ -1,4 +1,4 @@
-# Name: MySQL monitor script for monit
+# Name: MySQL Server monitor script for monit
 # By: @alandwarinasia
 # Usage: place in /etc/monit.d/
 
