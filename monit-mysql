@@ -1,0 +1,10 @@
+# Name: MySQL monitor script for monit
+# By: @alandwarinasia
+# Usage: place in /etc/monit.d/
+
+check process mysql with pidfile /var/run/mysqld/mysqld.pid
+   group database
+   start program = "/usr/bin/init.d start mysqld"
+   stop program = "/usr/bin/init.d stop mysqld"
+   if failed host 127.0.0.1 port 3306 then restart
+   if 5 restarts within 5 cycles then timeout
