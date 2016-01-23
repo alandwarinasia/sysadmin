@@ -1,5 +1,5 @@
 # Name: MySQL Server monitor script for monit
-# By: @alandwarinasia
+# Author: @alandwarinasia
 # Usage: place in /etc/monit.d/
 
 check process mysql with pidfile /var/run/mysqld/mysqld.pid
