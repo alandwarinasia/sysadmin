@@ -3,7 +3,7 @@
 # Usage: place in /etc/monit.d/
 
 check process sshd with pidfile /var/run/sshd.pid
-   start program  "/etc/init.d start sshd"
-   stop program  "/etc/init.d stop sshd"
+   start program  "/etc/init.d/sshd start"
+   stop program  "/etc/init.d/sshd stop"
    if failed port 22 protocol ssh then restart
    if 5 restarts within 5 cycles then timeout
