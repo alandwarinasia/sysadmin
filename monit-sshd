@@ -1,5 +1,5 @@
 # Name: SSH Server monitor script for monit
-# By: @alandwarinasia
+# Author: @alandwarinasia
 # Usage: place in /etc/monit.d/
 
 check process sshd with pidfile /var/run/sshd.pid
