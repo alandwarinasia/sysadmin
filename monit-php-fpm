@@ -1,3 +1,7 @@
+# Name: php-fpm monitor script for monit
+# Author: @alandwarinasia
+# Usage: place in /etc/monit.d/
+
 check process php-fpm with pidfile /var/run/php-fpm/php-fpm.pid
   group www-data 
   start program = "/etc/init.d/php-fpm start"
