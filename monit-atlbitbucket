@@ -1,0 +1,8 @@
+# Name: Bitbucket Server monitor script for monit
+# Author: @alandwarinasia
+# Usage: place in /etc/monit.d/
+
+check process bitbucket with pidfile /opt/atlassian/bitbucket/4.3.2/work/catalina.pid
+   start program  "/etc/init.d/atlbitbucket start"
+   stop program  "/etc/init.d/atlbitbucket stop"
+   if 5 restarts within 5 cycles then timeout
