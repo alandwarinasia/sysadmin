@@ -1,0 +1,22 @@
+# Title: Custom Linux Message Of The Day
+# Author: @alandwarinasia
+
+HOSTNAME=`uname -n`
+KERNEL=`uname -r`
+CPU=`uname -p`
+ARCH=`uname -m`
+# Variables to color the text with.
+W="\033[01;37m"
+B="\033[01;34m"
+R="\033[01;31m" 
+X="\033[00;37m"
+echo "$R#===================================================#" 
+echo  "       $W Welcome, $B $USER $W.                 "
+echo  "           $B $HOSTNAME                         "
+echo  "                                                "
+echo  "     The truth will set you free.               "
+echo  "                                                "
+echo  "       $R ARCH:   $W= $ARCH                     " 
+echo  "       $R KERNEL: $W= $KERNEL                   " 
+echo  "       $R CPU:    $W= $CPU                      " 
+echo  "$R#==================================================#"
