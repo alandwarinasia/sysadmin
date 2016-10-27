@@ -1,0 +1,9 @@
+# Name: Netdata monitor script for monit
+# Author: @alandwarinasia
+# Usage: place in /etc/monit.d/
+
+check process netdata with pidfile /opt/netdata/var/run/netdata.pid
+   start program  "/etc/init.d/netdata start"
+   stop program  "/etc/init.d/netdata stop"
+   if failed host localhost port 19999 protocol http then restart
+   if 5 restarts within 5 cycles then timeout
